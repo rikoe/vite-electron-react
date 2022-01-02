@@ -37,12 +37,16 @@
   }
 }
 
+code {
+  font-size: calc(10px + 1.5vmin);
+}
+
 button {
   font-size: calc(10px + 2vmin);
 }
 
 input {
-  font-size: calc(8px + 2vmin);
+  font-size: calc(10px + 1.5vmin);
 }
 
 fieldset {

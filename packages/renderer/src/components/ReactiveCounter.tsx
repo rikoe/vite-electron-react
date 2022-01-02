@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const ReactiveCounter = () => {
   const [count, setCount] = useState(0);

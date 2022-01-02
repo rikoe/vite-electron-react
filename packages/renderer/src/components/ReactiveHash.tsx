@@ -1,16 +1,11 @@
-import React, { useCallback, useMemo, useState } from "react";
-
-const fieldSetStyle: React.CSSProperties = {
-  margin: "2rem",
-  padding: "1rem",
-};
+import { useCallback, useMemo, useState } from 'react';
 
 const ReactiveHash = () => {
-  const [rawString, setRawString] = useState("Hello World");
+  const [rawString, setRawString] = useState('Hello World');
 
   const onInputChange = useCallback(
     (event) => setRawString(event.target.value),
-    [rawString]
+    [rawString],
   );
 
   const hashedString = useMemo(() => {
@@ -20,11 +15,11 @@ const ReactiveHash = () => {
   return (
     <>
       <div>
-        Raw value:{" "}
+        Raw value:{' '}
         <input value={rawString} type="text" onChange={onInputChange} />
       </div>
       <div>
-        Hashed by <code>nodeCrypto</code>:{" "}
+        Hashed by <code>nodeCrypto</code>:{' '}
         <input value={hashedString} type="text" readOnly={true} />
       </div>
     </>

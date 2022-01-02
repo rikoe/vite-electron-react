@@ -1,12 +1,10 @@
-import { useState } from "react";
-import "./App.css";
-import logo from "../assets/react-logo.svg";
-import ElectronVersions from "./components/ElectronVersions";
-import ReactiveCounter from "./components/ReactiveCounter";
-import ReactiveHash from "./components/ReactiveHash";
+import './App.css';
+import logo from '../assets/logo.svg';
+import ElectronVersions from './components/ElectronVersions';
+import ReactiveCounter from './components/ReactiveCounter';
+import ReactiveHash from './components/ReactiveHash';
 
 function App() {
-
   return (
     <div className="App">
       <header className="App-header">
@@ -29,7 +27,7 @@ function App() {
           >
             React
           </a>
-          {" | "}
+          {' | '}
           <a
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
@@ -38,7 +36,7 @@ function App() {
           >
             Vite
           </a>
-          {" | "}
+          {' | '}
           <a
             className="App-link"
             href="https://github.com/cawa-93/vite-electron-builder"

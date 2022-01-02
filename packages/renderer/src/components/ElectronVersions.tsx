@@ -1,11 +1,3 @@
-import React from "react";
-
-const divStyle: React.CSSProperties = {
-  textAlign: "left",
-  display: "grid",
-  justifyContent: "center",
-};
-
 const ElectronVersions = () => {
   return (
     <table>
