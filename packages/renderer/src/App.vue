@@ -5,7 +5,7 @@ import ElectronVersions from '/@/components/ElectronVersions.vue';</script>
 
 <template>
   <img
-    alt="Vue logo"
+    alt="Vite logo"
     src="../assets/logo.svg"
     width="150"
   >

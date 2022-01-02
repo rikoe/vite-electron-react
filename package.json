@@ -1,5 +1,5 @@
 {
-  "name": "vite-electron-builder",
+  "name": "vite-electron",
   "private": true,
   "engines": {
     "node": ">=v16.13",
@@ -7,6 +7,7 @@
   },
   "main": "packages/main/dist/index.cjs",
   "scripts": {
+    "start": "npm run watch",
     "build": "node scripts/build.js",
     "precompile": "cross-env MODE=production npm run build",
     "compile": "electron-builder build --config .electron-builder.config.js --dir --config.asar=false",
@@ -18,7 +19,8 @@
     "typecheck-preload": "tsc --noEmit -p packages/preload/tsconfig.json",
     "typecheck-renderer": "vue-tsc --noEmit -p packages/renderer/tsconfig.json",
     "typecheck": "npm run typecheck-main && npm run typecheck-preload && npm run typecheck-renderer",
-    "pretypecheck-renderer": "dts-cb -i packages/preload/src/**/*.ts -o packages/preload/exposedInMainWorld.d.ts"
+    "pretypecheck-renderer": "dts-cb -i packages/preload/src/**/*.ts -o packages/preload/exposedInMainWorld.d.ts",
+    "update-versions": "node scripts/update-electron-vendors.js"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.8.1",
