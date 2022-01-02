@@ -14,7 +14,9 @@ const config = {
     output: 'dist',
     buildResources: 'buildResources',
   },
-  publish: ['github'],
+  snap: {
+    publish: 'github'
+  },
   files: ['packages/**/dist/**'],
   extraMetadata: {
     version: process.env.VITE_APP_VERSION,
