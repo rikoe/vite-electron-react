@@ -15,12 +15,16 @@ const ReactiveHash = () => {
   return (
     <>
       <div>
-        Raw value:{' '}
-        <input value={rawString} type="text" onChange={onInputChange} />
+        <label>
+          Raw value:{' '}
+          <input type="text" value={rawString} onChange={onInputChange} />
+        </label>
       </div>
       <div>
-        Hashed by <code>nodeCrypto</code>:{' '}
-        <input value={hashedString} type="text" readOnly={true} />
+        <label>
+          Hashed by nodeCrypto:{' '}
+          <input type="text" value={hashedString} readOnly={true} />
+        </label>
       </div>
     </>
   );

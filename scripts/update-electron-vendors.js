@@ -26,10 +26,6 @@ function updateVendors() {
   const chromeMajorVersion =
     electronRelease.v8.split('.')[0] + electronRelease.v8.split('.')[1];
 
-  console.log(
-    `Updating versions to Chrome ${chromeMajorVersion} and Node ${nodeMajorVersion}...`,
-  );
-
   const browserslistrcPath = path.resolve(process.cwd(), '.browserslistrc');
 
   return Promise.all([

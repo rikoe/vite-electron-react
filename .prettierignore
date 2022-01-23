@@ -1,3 +1,4 @@
 .github
 dist
 *.md
+packages/preload/exposedInMainWorld.d.ts
