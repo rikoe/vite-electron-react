@@ -15,7 +15,7 @@ const config = {
     buildResources: 'buildResources',
   },
   snap: {
-    publish: 'github'
+    publish: 'github',
   },
   files: ['packages/**/dist/**'],
   extraMetadata: {
