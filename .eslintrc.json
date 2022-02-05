@@ -1,26 +1,25 @@
 {
   "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    /** @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#recommended-configs */
+    "plugin:@typescript-eslint/recommended",
+    /** @see https://github.com/prettier/eslint-plugin-prettier#recommended-configuration */
+    "plugin:prettier/recommended"
+  ],
   "env": {
     "es2021": true,
     "node": true,
     "browser": false
   },
-  "extends": [
-    "eslint:recommended",
-    /** @see https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#recommended-configs */
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint"],
   "ignorePatterns": [
-    "packages/preload/exposedInMainWorld.d.ts",
-    "node_modules/**",
-    "**/dist/**"
+    "packages/preload/exposedInMainWorld.d.ts"
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",

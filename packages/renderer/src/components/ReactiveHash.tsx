@@ -1,12 +1,7 @@
-import { useCallback, useMemo, useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 const ReactiveHash = () => {
   const [rawString, setRawString] = useState('Hello World');
-
-  const onInputChange = useCallback(
-    (event) => setRawString(event.target.value),
-    [rawString],
-  );
 
   const hashedString = useMemo(() => {
     return window.nodeCrypto.sha256sum(rawString);
@@ -17,7 +12,7 @@ const ReactiveHash = () => {
       <div>
         <label>
           Raw value:{' '}
-          <input type="text" value={rawString} onChange={onInputChange} />
+          <input type="text" value={rawString} onChange={event => setRawString(event.target.value)} />
         </label>
       </div>
       <div>
