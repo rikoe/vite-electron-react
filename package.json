@@ -1,5 +1,5 @@
 {
-  "name": "vite-electron",
+  "name": "vite-electron-react",
   "private": true,
   "engines": {
     "node": ">=v16.13",
